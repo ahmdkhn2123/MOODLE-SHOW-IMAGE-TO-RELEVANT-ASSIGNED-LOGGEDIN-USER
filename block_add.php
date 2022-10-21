@@ -38,11 +38,11 @@ class block_add extends block_base
 		if ($mform->is_cancelled()) {
 			echo "sorry";
 		}else if ($fromform = $mform->get_data()) {
-            $record= new stdClass();
-            $record->id = $fromform->id;
-            $a=$fromform->message['text'];
+                        $record= new stdClass();
+                        $record->id = $fromform->id;
+                        $a=$fromform->message['text'];
 			$b=preg_match_all('#src="([^\s]+)"#', $a, $matches);
-            $c=implode(' ',$matches[1]);
+                        $c=implode(' ',$matches[1]);
 			$record->message=$c;
 			$record->message_type=$fromform->message_type;
 			$record->message_attribute=$fromform->message_attribute;
